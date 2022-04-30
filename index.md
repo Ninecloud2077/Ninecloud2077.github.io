@@ -9,8 +9,5 @@ So I'm using python to make game now
 source will upload to GitHub soon
 Actually it's unfinished
 ### What did/will we do:
-[]upload source or exe file\n
-[]finish the simple game
-
-[^1]:Jack has no any GitHub or Discord accounts.His QQ number:3264661489
-[^2]:Why not Kitten?Because it can't be saved as a file and we aren't good at it
+[] upload source or exe file
+[] finish the simple game
