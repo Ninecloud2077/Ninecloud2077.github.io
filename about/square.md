@@ -8,5 +8,5 @@ So I'm using python to make game now
 source will upload to GitHub soon
 Actually it's unfinished
 ## What did/will we do:
-[] upload exe file
-[] finish the simple game
+- [ ] upload exe file
+- [ ] finish the simple game
