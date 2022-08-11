@@ -1,2 +1,5 @@
 body {background-color:#FAFAFA;}
-button a,div a,ul a{text-decoration:none;color: #fff;}
+button a,div a,ul a{text-decoration:none;}
+button a{color: #FFF;}
+button {margin-top: 15px;}
+h2,h3{margin-top: 10px;margin-bottom: 10px;}
