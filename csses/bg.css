@@ -1,7 +1,7 @@
 body {background-color:#FAFAFA;}
 a{text-decoration:none;}
 button a{color: #FFF;}
-button {margin-top: 15px;}
+button {margin-top: 15px;margin-bottom: 20px;}
 h2,h3{margin-top: 10px;margin-bottom: 10px;margin-left: 10px;}
 div p{margin-left: 25px;}
 div.label{margin-top: 25px;margin-left: 30px;}
