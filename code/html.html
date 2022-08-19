@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> <!-- b4 -->
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery -->
     <link rel="stylesheet" type="text/css" href="../csses/bg.css" />
+    <script src="../csses/bg.js"></script>
 
     <script>
       $(document).ready(function(){
@@ -30,18 +31,27 @@
 
       <h2>简单论述这仨的区别</h2>
       <ul>
-        <li>HTML：摆一个按钮在网页上。</li>
-        <li>CSS：规定这个按钮的形状、大小、颜色等等。</li>
-        <li>Javascript<small>（一般简称js，.js做后缀的文件一般都是Javascript）</small>：让按钮按下的时候变换一些东西。</li>
-        <li>HTML是网页最重要的东西，没有它CSS和js也不能用，整个网站也没有。</li>
+        <li><strong>HTML：</strong>摆一个按钮在网页上。</li>
+        <li><strong>CSS：</strong>规定这个按钮的形状、大小、颜色等等。</li>
+        <li><strong>Javascript：</strong><small>（一般简称js，）</small>：让按钮按下的时候变换一些东西。</li>
+        <li>HTML是网页最重要的东西，没有它CSS和js也不能用，整个网站也没有。本站也使用这样的形式。</li>
+        <li>HTML的文件格式一般为.htm .html，CSS为.css，js为.js。</li>
       </ul>
 
       <button class="btn btn-info" id="b">按我</button>
       <p id="show">
         以上面这个按钮为例，让其存在需要用HTML定义 <br />
         规定它是灰色，圆角需要用CSS<small>（这里用Bootstrap4）</small><br />
-        让它按下以后显示这段文字需要用Javascript（这里用jQuery）
+        让它按下以后显示这段文字需要用Javascript<small>（这里用jQuery）</small>
       </p>
+
+      <h2>第三方库或者其它相关项目</h2>
+      <ul>
+        <li><strong>CSS库Bootstrap：</strong>比较好的设计框架，导入以后声明一堆class就可以创造好看的样式，还有网格系统便于调整布局。分为2/3/4/5等版本。<small>（本站使用4）</small></li>
+        <li><strong>js库jQuery：</strong>大幅简化了选择HTML元素的过程。（本站使用）</li>
+        <li><strong>XML：</strong>用于存储信息的语言，通过js读取在HTML上显示出来。</li>
+        <li><strong>XHTML标准：</strong>XML语法十分严格，而HTML比较随意。XHTML结合两者，在HTML的基础上令语法更为严格。</li>
+      </ul>
 
       <h2>其它：就讲几个经验</h2>
       <ul>
