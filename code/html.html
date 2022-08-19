@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> <!-- b4 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery -->
+    <link rel="stylesheet" type="text/css" href="../csses/bg.css" />
+
+    <script>
+      $(document).ready(function(){
+        $("#show").hide();
+        $("#b").click(function(){
+          $("#show").toggle(250);
+        });
+      });
+    </script>
+
+    <title>HTML</title>
+  </head>
+  <body>
+
+    <div class="jumbotron text-center" style="margin-top:55px;">
+      <h1>HTML & CSS & Javascript</h1>
+      <p>网站三件套</p>
+      <a class="btn btn-primary" href="../index.html">回到主界面</a>
+    </div>
+
+    <div class="container">
+
+      <h2>简单论述这仨的区别</h2>
+      <ul>
+        <li>HTML：摆一个按钮在网页上。</li>
+        <li>CSS：规定这个按钮的形状、大小、颜色等等。</li>
+        <li>Javascript<small>（一般简称js，.js做后缀的文件一般都是Javascript）</small>：让按钮按下的时候变换一些东西。</li>
+        <li>HTML是网页最重要的东西，没有它CSS和js也不能用，整个网站也没有。</li>
+      </ul>
+
+      <button class="btn btn-info" id="b">按我</button>
+      <p id="show">
+        以上面这个按钮为例，让其存在需要用HTML定义 <br />
+        规定它是灰色，圆角需要用CSS<small>（这里用Bootstrap4）</small><br />
+        让它按下以后显示这段文字需要用Javascript（这里用jQuery）
+      </p>
+
+      <h2>其它：就讲几个经验</h2>
+      <ul>
+        <li>p里可以加small，可以加a，甚至可以加div，但请绝对不要p里塞p。别问咋知道的</li>
+        <li>重复的style样式可以放进id或者class统一管理，重复的class可以用js<small>（jQuery最棒）</small>统一设置。<small>重复class在用Bootstrap4时候常常遇到。</small></li>
+      </ul>
+      
+    </div>
+    
+  </body>
+</html>
