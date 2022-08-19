@@ -3,3 +3,4 @@ button a{color: #FFF;text-decoration:none;}
 button{margin-top: 15px;margin-bottom: 20px;}
 div.container h2,div.container h3{margin-top: 10px;margin-bottom: 10px;}
 div.container p,div.container ul{margin-left: 20px;}
+div.jumbotron a.btn{margin-bottom: 25px;}
