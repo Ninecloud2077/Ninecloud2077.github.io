@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Frame</title>
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="../csses/bg.js"></script>
+    <link rel="stylesheet" type="text/css" href="../csses/bg.css" />
+  </head>
+
+  <body>
+    <div class="jumbotron bg-secondary text-center text-white" id="head">
+      <h1>Python的安装</h1>
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hider" style="margin-left: 12.5%;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="hider">
+        <ul class="navbar-nav" style="margin-left: 17.5%;">
+          <li class="nav-item">
+            <a class="nav-link" href="py.html">回到主界面</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" id="body" style="margin-bottom: 35%;">
+        <h2>具体咋安装</h2>
+        <p>
+        	本站可能只着重阐述Windows系统下的安装。因为Liunx之类的系统基本一句命令搞定：<br />
+        	<span class="text-primary">sudo apt install python</span><br />
+          在Windows上下载python，你可以去<a class="text-muted" href="https://www.python.org/">官网</a>找下载包。<br />
+          <strong>注意：</strong>如果你的电脑是Windows7，请选择3.8.10及以下的版本并且在换电脑以前打消任何更新的念头。为什么要这么强调，因为我没忍住。<br />
+          下载包之后，你可以选择默认形式的安装或者自定义安装指定路径。如果你的C盘要满的话不建议用默认的，找个空的盘自定义下载。<br />
+          <strong>再次注意：</strong>请把配置环境变量的勾打上（Add python 3.x to PATH），否则没有环境变量后期会很麻烦。
+        </p>
+  
+        <h2>其它配置</h2>
+        <p>
+          你可以从windows任务栏里打开IDLE测试。这是我一开始用的法子。<br />
+          但是用到后面你会发现，IDLE里编辑还是有点难搞，虽然比记事本好得多。<br />
+          这时候你就可以试试万能的<a class="text-muted" href="https://code.visualstudio.com/">VSC</a>。<br />
+          <small>关于Visual Studio Code的使用后期我会出个具体教学。</small><br />
+          从官网下VSC安装，然后打开扩展（<kbd>Ctrl + Shift + X</kbd>），找到作者为Microsoft的Python扩展。<br />
+          安装之后绑定下载的Python，你就可以用VSC编辑代码的同时顺畅地测试。<br />
+          VSC是专业的代码编辑器，扩展装上之后可以提供代码补全、纠错等等功能，非常强大。<br />
+          找到一个Python文件，VSC打开以后右键选择“Run Python File in Terminal”，等待PowerShell命令行启动就可以运行文件。<br />
+          如果你没保存而选择了运行，它会自动帮你保存，非常贴心。<br />
+        </p>
+    </div>
+
+    <div class="jumbotron text-center text-secondary">
+      Code by Ninecloud_Const<br />
+      Powered by Bootstrap4&jQuery
+    </div>
+
+  </body>
+</html>
