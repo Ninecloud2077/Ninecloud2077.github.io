@@ -43,6 +43,6 @@ function SetClasses(){
 };
 
 $(document).ajaxStop(function(){
-    SetClasses();
     LinkName();
+    SetClasses();
 });
