@@ -20,14 +20,14 @@
       <p>框架网页</p>
     </div>
 
-    {{ Navbar }}
+    <div v-html="Navbar"></div>
 
     <div class="container" id="body">
       <h2>大标题</h2>
       <p>正文</p>
     </div>
 
-    {{ End }}
+    <div v-html="End"></div>
 
     <script>
     $(document).ready(function(){
