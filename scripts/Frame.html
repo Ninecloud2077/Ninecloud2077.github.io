@@ -8,10 +8,20 @@
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 
     <script src="../csses/bg.js"></script>
     <link rel="stylesheet" type="text/css" href="../csses/bg.css" />
+
+    <script>
+      $(document).ready(function(){
+        $.ajax({url:"Navbar.html",success:function(result){
+          $("#head").after(result);
+        }});
+        $.ajax({url:"End.html",success:function(result){
+          $("#body").after(result);
+      }});
+    </script>
+
   </head>
 
   <body>
@@ -20,35 +30,10 @@
       <p>框架网页</p>
     </div>
 
-    <div v-html="Navbar"></div>
-
     <div class="container" id="body">
       <h2>大标题</h2>
       <p>正文</p>
     </div>
-
-    <div v-html="End"></div>
-
-    <script>
-    $(document).ready(function(){
-      var n,b;
-      $.ajax({url:"Navbar.html",success:function(result){
-        n=result;
-      }});
-      $.ajax({url:"End.html",success:function(result){
-        b=result;
-      }});
-
-      new Vue({
-          el:"body",
-          data:{
-            Navbar:n,
-            End:b
-          }
-        })
-    });
-    
-    </script>
 
   </body>
 </html>
