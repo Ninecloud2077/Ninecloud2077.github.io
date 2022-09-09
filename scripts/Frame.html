@@ -13,25 +13,31 @@
     <link rel="stylesheet" type="text/css" href="../csses/bg.css" />
 
     <script>
+      //-----各个链接-----
+      var links=["Link1","Link2","Link3"]
+      //-----------------
+
+      function LinkName(){
+        for(var i=0;i<$("a.nav-link").length;i++)
+        {
+          $("a.nav-link").eq(i).text(links[i])
+        }
+      };
+
       $(document).ready(function(){
-        $.ajax({url:"Navbar.html",success:function(result){
-          $("#head").after(result);
-        }});
-        $.ajax({url:"End.html",success:function(result){
-          $("#body").after(result);
-        }});
+        LinkName();
       });
     </script>
 
   </head>
 
   <body>
-    <div class="jumbotron bg-secondary text-center text-white" id="head">
+    <div id="head">
       <h1>Test</h1>
       <p>框架网页</p>
     </div>
 
-    <div class="container" id="body">
+    <div id="body">
       <h2>大标题</h2>
       <p>正文</p>
     </div>
