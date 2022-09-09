@@ -1,4 +1,4 @@
-var singlelink;
+var singlelink,nav;
 
 $(document).ready(function(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Link.html",
@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
-        $("#head").after(result);
+        nav=$(result);
     }
     });
     $.ajax({url:"https://ninecloud2077.github.io/scripts/End.html",
@@ -31,6 +31,8 @@ function LinkName(){
         singlelink.attr("href",hrefs[i]);
         lilist.push(singlelink);
     }
+    nav.find("ul.navbar-nav").append(lilist);
+    $("#head").after(nav);
 };
 
 function SetClasses(){
