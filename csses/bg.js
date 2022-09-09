@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Head.html",
     success:function(result){
-        $("head").append(result);
+        $("head").append([result,$("<title></title>").text(webtitle)]);
     }
     });
 });
@@ -28,7 +28,6 @@ function SetClasses(){
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
-    $("title").append($("<title></title>").text(webtitle));
 };
 
 $(document).ajaxStop(function(){
