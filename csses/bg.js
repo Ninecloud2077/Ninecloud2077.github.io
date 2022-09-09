@@ -28,6 +28,7 @@ function SetClasses(){
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
+    $("title").text(webtitle);
 };
 
 $(document).ajaxStop(function(){
