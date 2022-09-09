@@ -9,6 +9,11 @@ $(document).ready(function(){
         $("#body").after(result);
     }
     });
+    $.ajax({url:"https://ninecloud2077.github.io/scripts/Head.html",
+    success:function(result){
+        $("head").append(result);
+    }
+    });
 });
 
 function LinkName(){
