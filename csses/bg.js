@@ -9,7 +9,10 @@ $(document).ready(function(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
         result=$(result);
-        result.find("#before").attr("href",beforehref);
+        if(beforehref)
+            result.find("#before").attr("href",beforehref);
+        else
+            result.empty("#before");
         $("#head").before(result);
     }
     });
