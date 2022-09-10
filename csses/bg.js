@@ -8,7 +8,9 @@ $(document).ready(function(){
     });
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
-        nav=$(result);
+        result=$(result);
+        result.find("#before").attr("href",beforehref);
+        $("#head").before(result);
     }
     });
     $.ajax({url:"https://ninecloud2077.github.io/scripts/End.html",
@@ -23,6 +25,7 @@ $(document).ready(function(){
     });
 });
 
+/*
 function LinkName(){
     var lilist=[];
     for(var i=0;i<links.length;i++)
@@ -34,15 +37,15 @@ function LinkName(){
     nav.find("ul.navbar-nav").append(lilist);
     $("#head").after(nav);
 };
+*/
 
 function SetClasses(){
-    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark");
+    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark fixed-top");
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
 };
 
 $(document).ajaxStop(function(){
-    LinkName();
     SetClasses();
 });
