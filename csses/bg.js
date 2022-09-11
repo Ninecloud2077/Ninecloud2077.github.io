@@ -18,7 +18,7 @@ function DoAjax(){
         head=$(result);
         if (debug)
         {
-            $("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
+            head.find("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
         }
     }
     });
@@ -39,8 +39,15 @@ function SetClasses(){
     $("#body").addClass("container");
 };
 
+function SetLink(){
+    $("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
+}
+
 $(document).ajaxStop(function(){
     PutTemps();
     SetClasses();
-    //alert("Success to set debug!Configulations");
+    if(debug)
+    {
+        SetLink();
+    }
 });
