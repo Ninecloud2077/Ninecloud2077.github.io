@@ -1,46 +1,31 @@
-var singlelink,nav;
-
-$(document).ready(function(){
-    $.ajax({url:"https://ninecloud2077.github.io/scripts/Link.html",
-    success:function(result){
-        singlelink=$(result);
-    }
-    });
+var nav,end,head;
+function DoAjax(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
-        result=$(result);
-        if(beforehref)
-            result.find("#before").attr("href",beforehref);
-        else
-            result.empty("#before");
-        $("#head").before(result);
+        nav=result;
     }
     });
+
     $.ajax({url:"https://ninecloud2077.github.io/scripts/End.html",
     success:function(result){
-        $("#body").after(result);
+        end=result;
     }
     });
+
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Head.html",
     success:function(result){
-        $("head").append([result,$("<title></title>").text(webtitle)]);
+        head=$(result);
+        if(debug)
+            head.find("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
     }
     });
-});
+}
 
-/*
-function LinkName(){
-    var lilist=[];
-    for(var i=0;i<links.length;i++)
-    {  
-        singlelink.text(links[i]);
-        singlelink.attr("href",hrefs[i]);
-        lilist.push(singlelink);
-    }
-    nav.find("ul.navbar-nav").append(lilist);
-    $("#head").after(nav);
-};
-*/
+function PutTemps(){
+    $("#body").before(nav);
+    $("#body").after(end);
+    $("head").append([head,$("<title></title>").text(webtitle)]);
+}
 
 function SetClasses(){
     $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark fixed-top");
@@ -50,5 +35,6 @@ function SetClasses(){
 };
 
 $(document).ajaxStop(function(){
+    PutTemps();
     SetClasses();
 });
