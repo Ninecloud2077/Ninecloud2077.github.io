@@ -3,6 +3,7 @@ function DoAjax(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
         nav=$(result);
+        nav.find("#before").attr("href",beforehref);
     }
     });
 
@@ -38,5 +39,5 @@ $(document).ajaxStop(function(){
     DoAjax();
     PutTemps();
     SetClasses();
-    alert("Success to set debug!Configulations")
+    alert("Success to set debug!Configulations");
 });
