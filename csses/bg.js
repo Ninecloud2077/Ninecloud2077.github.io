@@ -42,5 +42,5 @@ function SetClasses(){
 $(document).ajaxStop(function(){
     PutTemps();
     SetClasses();
-    alert("Success to set debug!Configulations");
+    //alert("Success to set debug!Configulations");
 });

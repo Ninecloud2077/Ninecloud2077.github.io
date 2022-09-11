@@ -2,7 +2,6 @@
 <html>
   <head>
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <!--<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>-->
     
     <script>
       //-----------------
@@ -11,17 +10,6 @@
       var debug=true; //是否使用本地css
       var webtitle="Frame"; //网页标题
       //-----------------
-
-
-      var selfjs=$("<script>");
-      if (debug){
-        selfjs.attr("src",rootpath.concat("/csses/bg.js"))
-      }
-      else{
-        selfjs.attr("src","https://ninecloud2077.github.io/csses/bg.js")
-      }
-      $("head").append(selfjs);
-
     </script>
   </head>
 
