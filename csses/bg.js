@@ -1,7 +1,53 @@
-$(document).ready(function(){
-    $("div.jumbotron p").addclass("display-5");
-    $("small").addclass("text-muted");
-    $("div.list-group a").addClass("list-group-item");
-    $("div.list-group a").addClass("list-group-item-action");
-    $("div.list-group a").addClass("list-group-item-secondary");
+var nav,end,head;
+function DoAjax(){
+    $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
+    success:function(result){
+        nav=$(result);
+        nav.find("#before").attr("href",beforehref);
+    }
+    });
+
+    $.ajax({url:"https://ninecloud2077.github.io/scripts/End.html",
+    success:function(result){
+        end=$(result);
+    }
+    });
+
+    $.ajax({url:"https://ninecloud2077.github.io/scripts/Head.html",
+    success:function(result){
+        head=$(result);
+        if (debug)
+        {
+            head.find("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
+        }
+    }
+    });
+};
+DoAjax();
+
+function PutTemps(){
+    $("#body").before(nav);
+    $("#body").after(end);
+    webtitle=webtitle.concat(" | NC_Const");
+    $("head").append([head,$("<title></title>").text(webtitle)]);
+}
+
+function SetClasses(){
+    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark fixed-top");
+    $("#head").addClass("jumbotron bg-secondary text-center text-white");
+    $("#end").addClass("jumbotron text-center text-secondary");
+    $("#body").addClass("container");
+};
+
+function SetLink(){
+    $("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
+}
+
+$(document).ajaxStop(function(){
+    PutTemps();
+    SetClasses();
+    if(debug)
+    {
+        SetLink();
+    }
 });

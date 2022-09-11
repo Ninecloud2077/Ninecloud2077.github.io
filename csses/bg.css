@@ -1,6 +1,6 @@
 body {background-color:#FAFAFA;}
-button a{color: #FFF;text-decoration:none;}
-button{margin-top: 15px;margin-bottom: 20px;}
-div.container h2,div.container h3{margin-top: 10px;margin-bottom: 10px;}
-div.container p,div.container ul{margin-left: 20px;}
-div.jumbotron a.btn{margin-bottom: 25px;}
+a.nav-link,div#body p {font-size: 22.5px;}
+div#head p {font-size: 31.5px;}
+div#body {margin-top: 1.25%;}
+div#head {margin-top: 0;margin-bottom: 0;border-radius: 0;}
+nav#browser {margin-bottom: 0;}
