@@ -2,13 +2,13 @@ var nav,end,head;
 function DoAjax(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
-        nav=result;
+        nav=$(result);
     }
     });
 
     $.ajax({url:"https://ninecloud2077.github.io/scripts/End.html",
     success:function(result){
-        end=result;
+        end=$(result);
     }
     });
 
@@ -35,6 +35,8 @@ function SetClasses(){
 };
 
 $(document).ajaxStop(function(){
+    DoAjax();
     PutTemps();
     SetClasses();
+    alert("Success to set debug!Configulations")
 });
