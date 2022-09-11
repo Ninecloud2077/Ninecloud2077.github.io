@@ -16,15 +16,19 @@ function DoAjax(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Head.html",
     success:function(result){
         head=$(result);
-        if(debug)
+        if (debug)
+        {
             head.find("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
+        }
     }
     });
-}
+};
+DoAjax();
 
 function PutTemps(){
     $("#body").before(nav);
     $("#body").after(end);
+    webtitle=webtitle.concat(" | NC_Const");
     $("head").append([head,$("<title></title>").text(webtitle)]);
 }
 
@@ -36,7 +40,6 @@ function SetClasses(){
 };
 
 $(document).ajaxStop(function(){
-    DoAjax();
     PutTemps();
     SetClasses();
     alert("Success to set debug!Configulations");
