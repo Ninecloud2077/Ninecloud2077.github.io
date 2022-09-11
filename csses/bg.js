@@ -18,7 +18,7 @@ function DoAjax(){
         head=$(result);
         if (debug)
         {
-            head.find("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
+            $("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
         }
     }
     });
