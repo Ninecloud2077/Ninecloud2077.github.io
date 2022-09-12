@@ -61,7 +61,7 @@ function SetCard(){
         singlecard.find(".btn").attr("href",carddiv.attr("hrefpath"));
         singlecard.text("");
 
-        carddiv.append(singlecard);
+        $("div.linkcard").eq(i).append(singlecard);
     }
 }
 
