@@ -1,4 +1,4 @@
-var nav,end,head,ajaxcard;
+var nav,end,head,cardload;
 function DoAjax(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
@@ -23,11 +23,14 @@ function DoAjax(){
     }
     });
 
+    $("div.linkcard").load("https://ninecloud2077.github.io/scripts/LinkCard.html");
+    /*
     $.ajax({url:"https://ninecloud2077.github.io/scripts/LinkCard.html",
     success:function(result){
         ajaxcard=$(result);
     }
     });
+    */
 };
 DoAjax();
 
@@ -51,8 +54,6 @@ function SetLink(){
 }
 
 function SetCard(){
-    $("div.linkcard").load("https://ninecloud2077.github.io/scripts/LinkCard.html");
-
     $("div.linkcard").addClass("card img-fluid");
     for(var i=0;i<$("div.linkcard").length;i++){
         var carddiv=$("div.linkcard").eq(i);
