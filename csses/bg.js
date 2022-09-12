@@ -62,7 +62,7 @@ function SetCard(){
         $(this).find(".card-text").text(carddiv.text());
         $(this).find(".btn").attr("href",carddiv.attr("hrefpath"));
         $(this).text("");
-        
+
         return "";
     });
 
@@ -83,6 +83,7 @@ function SetCard(){
 
 var ajaxdid=false;
 $(document).ajaxStop(function(){
+    ajaxdid=true;
     if (ajaxdid)
     {
         return;
@@ -95,5 +96,4 @@ $(document).ajaxStop(function(){
     {
         SetLink();
     }
-    ajaxdid=true;
 });
