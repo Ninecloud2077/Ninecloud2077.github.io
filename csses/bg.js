@@ -51,7 +51,7 @@ function SetLink(){
 }
 
 function SetCard(){
-    $("div.linkcard").load("https://ninecloud2077.github.io/csses/LinkCard.html");
+    $("div.linkcard").load("https://ninecloud2077.github.io/scripts/LinkCard.html");
 
     $("div.linkcard").addClass("card img-fluid");
     for(var i=0;i<$("div.linkcard").length;i++){
