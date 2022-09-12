@@ -54,7 +54,7 @@ function SetCard(){
     $("div.linkcard").addClass("card img-fluid");
     for(var i=0;i<$("div.linkcard").length;i++){
         var singlecard=ajaxcard;
-        var carddiv=linkcards.eq(i);
+        var carddiv=$("div.linkcard").eq(i);
 
         singlecard.find(".card-img-top").attr("src",carddiv.attr("img"));
         singlecard.find(".card-title").text(carddiv.attr("cardtitle"));
