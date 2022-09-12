@@ -2,7 +2,23 @@ body {background-color:#FAFAFA;}
 a.nav-link,div#body p {font-size: 22px;}
 div#head p {font-size: 30px;}
 div#body {margin-top: 1.25%;}
-div#head {margin-top: 0;margin-bottom: 0;border-radius: 0;}
+div#head {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+}
 nav#browser {margin-bottom: 0;}
-.left {max-width: 300px;max-height: 300px;}
-.right {margin-left: 7.5%;font-size: 23px;}
+.left {
+    max-width: 450px;
+    max-height: 450px;
+    min-width: 200px;
+    min-height: 200px;
+}
+.right {
+    font-size: 23px;
+}
+.left img {
+    max-width: inherit;
+    max-height: inherit;
+    min-height: inherit;
+}
