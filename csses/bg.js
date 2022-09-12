@@ -1,4 +1,4 @@
-var nav,end,head,cardload;
+var nav,end,head;
 function DoAjax(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
@@ -23,7 +23,6 @@ function DoAjax(){
     }
     });
 
-    $("div.linkcard").load("https://ninecloud2077.github.io/scripts/LinkCard.html");
     /*
     $.ajax({url:"https://ninecloud2077.github.io/scripts/LinkCard.html",
     success:function(result){
@@ -54,21 +53,41 @@ function SetLink(){
 }
 
 function SetCard(){
+    $("div.linkcard").load("scripts/LinkCard.html");
     $("div.linkcard").addClass("card img-fluid");
+
+    $("div.linkcard").text(function(i,o){
+        $(this).find(".card-img-top").attr("src",carddiv.attr("img"));
+        $(this).find(".card-title").text(carddiv.attr("cardtitle"));
+        $(this).find(".card-text").text(carddiv.text());
+        $(this).find(".btn").attr("href",carddiv.attr("hrefpath"));
+        $(this).text("");
+        
+        return "";
+    });
+
+    /*
     for(var i=0;i<$("div.linkcard").length;i++){
         var carddiv=$("div.linkcard").eq(i);
 
-        $("div.linkcard").eq(i).find(".card-img-top").attr("src",carddiv.attr("img"));
-        $("div.linkcard").eq(i).find(".card-title").text(carddiv.attr("cardtitle"));
-        $("div.linkcard").eq(i).find(".card-text").text(carddiv.text());
-        $("div.linkcard").eq(i).find(".btn").attr("href",carddiv.attr("hrefpath"));
-        $("div.linkcard").eq(i).text("");
+        $(this).find(".card-img-top").attr("src",carddiv.attr("img"));
+        $(this).find(".card-title").text(carddiv.attr("cardtitle"));
+        $(this).find(".card-text").text(carddiv.text());
+        $(this).find(".btn").attr("href",carddiv.attr("hrefpath"));
+        $(this).text("");
 
-        $("div.linkcard").eq(i).append($("div.linkcard").eq(i));
-    }        
+        $(this).append($("div.linkcard").eq(i));
+    }      
+    */  
 }
 
+var ajaxdid=false;
 $(document).ajaxStop(function(){
+    if (ajaxdid)
+    {
+        return;
+    }
+
     PutTemps();
     SetClasses();
     SetCard();
@@ -76,4 +95,5 @@ $(document).ajaxStop(function(){
     {
         SetLink();
     }
+    ajaxdid=true;
 });
