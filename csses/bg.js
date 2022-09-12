@@ -61,13 +61,14 @@ function SetCard(){
         singlecard.find(".btn").attr("href",carddiv.attr("hrefpath"));
         singlecard.text("");
 
-        linkcards.eq(i).append(singlecard);
+        carddiv.append(singlecard);
     }
 }
 
 $(document).ajaxStop(function(){
     PutTemps();
     SetClasses();
+    SetCard();
     if(debug)
     {
         SetLink();
