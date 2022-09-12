@@ -26,7 +26,7 @@ function DoAjax(){
 DoAjax();
 
 function PutTemps(){
-    $("#body").before(nav);
+    $("#head").before(nav);
     $("#body").after(end);
     webtitle=webtitle.concat(" | NC_Const");
     $("head").append([head,$("<title></title>").text(webtitle)]);
@@ -40,7 +40,7 @@ function SetClasses(){
     $("#links").addClass("container-fluid");
     $("a.nav-link i.fa").addClass("fa-fw");
     $(".left").addClass("col-6 col-sm-4 img-fluid");
-    $(".right").addClass("col");
+    $(".right").addClass("col text-primary");
 
     /*
     $(".linkcard").prepend(
