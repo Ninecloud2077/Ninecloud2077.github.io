@@ -40,7 +40,7 @@ function SetClasses(){
     $("#links").addClass("container-fluid");
     $("a.nav-link i.fa").addClass("fa-fw");
     $(".left").addClass("col-6 col-sm-4 img-fluid");
-    $(".right").addClass("col text-primary");
+    $(".right").addClass("col text-info");
 
     /*
     $(".linkcard").prepend(
