@@ -51,7 +51,7 @@ function SetLink(){
 }
 
 function SetCard(){
-    var linkcards=$("div.linkcard");
+    $("div.linkcard").addClass("card img-fluid");
     for(var i=0;i<$("div.linkcard").length;i++){
         var singlecard=ajaxcard;
         var carddiv=linkcards.eq(i);
@@ -62,8 +62,8 @@ function SetCard(){
         singlecard.find(".btn").attr("href",carddiv.attr("hrefpath"));
         singlecard.text("");
 
-        $("div.linkcard").eq(i).append(singlecard);
-    }
+        $("div.linkcard").append(singlecard);
+    }        
 }
 
 $(document).ajaxStop(function(){
