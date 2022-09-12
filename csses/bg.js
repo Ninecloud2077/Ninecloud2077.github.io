@@ -43,6 +43,7 @@ function SetClasses(){
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
+    $("a.nav-link i.fa").addClass("fa-fw");
 };
 
 function SetLink(){
