@@ -51,18 +51,19 @@ function SetLink(){
 }
 
 function SetCard(){
+    $("div.linkcard").Load("https://ninecloud2077.github.io/csses/LinkCard.html");
+
     $("div.linkcard").addClass("card img-fluid");
     for(var i=0;i<$("div.linkcard").length;i++){
-        var singlecard=ajaxcard;
         var carddiv=$("div.linkcard").eq(i);
 
-        singlecard.find(".card-img-top").attr("src",carddiv.attr("img"));
-        singlecard.find(".card-title").text(carddiv.attr("cardtitle"));
-        singlecard.find(".card-text").text(carddiv.text());
-        singlecard.find(".btn").attr("href",carddiv.attr("hrefpath"));
-        singlecard.text("");
+        $("div.linkcard").eq(i).find(".card-img-top").attr("src",carddiv.attr("img"));
+        $("div.linkcard").eq(i).find(".card-title").text(carddiv.attr("cardtitle"));
+        $("div.linkcard").eq(i).find(".card-text").text(carddiv.text());
+        $("div.linkcard").eq(i).find(".btn").attr("href",carddiv.attr("hrefpath"));
+        $("div.linkcard").eq(i).text("");
 
-        $("div.linkcard").eq(i).append(singlecard);
+        $("div.linkcard").eq(i).append($("div.linkcard").eq(i));
     }        
 }
 
