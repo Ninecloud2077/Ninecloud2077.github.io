@@ -83,12 +83,12 @@ function SetCard(){
 
 var ajaxdid=false;
 $(document).ajaxStop(function(){
-    ajaxdid=true;
     if (ajaxdid)
     {
         return;
     }
-
+    ajaxdid=true;
+    
     PutTemps();
     SetClasses();
     SetCard();
