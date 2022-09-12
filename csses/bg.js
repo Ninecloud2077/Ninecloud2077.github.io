@@ -22,14 +22,6 @@ function DoAjax(){
         }
     }
     });
-
-    /*
-    $.ajax({url:"https://ninecloud2077.github.io/scripts/LinkCard.html",
-    success:function(result){
-        ajaxcard=$(result);
-    }
-    });
-    */
 };
 DoAjax();
 
@@ -46,12 +38,21 @@ function SetClasses(){
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
     $("a.nav-link i.fa").addClass("fa-fw");
+
+    $(".linkcard").prepend(
+        $("<h4>").text($(this).attr("title"))
+        );
+    $(".linkcard").css(
+        "background-image",
+        "url(\"".concat($(this).attr("img"),"\")")
+        );
 };
 
 function SetLink(){
     $("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
 }
 
+/*
 function SetCard(){
     $("div.linkcard").load("scripts/LinkCard.html");
     $("div.linkcard").addClass("card img-fluid");
@@ -66,7 +67,6 @@ function SetCard(){
         return "";
     });
 
-    /*
     for(var i=0;i<$("div.linkcard").length;i++){
         var carddiv=$("div.linkcard").eq(i);
 
@@ -78,20 +78,13 @@ function SetCard(){
 
         $(this).append($("div.linkcard").eq(i));
     }      
-    */  
 }
+*/  
 
-var ajaxdid=false;
+
 $(document).ajaxStop(function(){
-    if (ajaxdid)
-    {
-        return;
-    }
-    ajaxdid=true;
-    
     PutTemps();
     SetClasses();
-    SetCard();
     if(debug)
     {
         SetLink();
