@@ -37,8 +37,10 @@ function SetClasses(){
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
+    $("#links").addClass("container-fluid");
     $("a.nav-link i.fa").addClass("fa-fw");
     $(".left").addClass("col-6 col-sm-4 img-fluid");
+    $(".right").addClass("col");
 
     /*
     $(".linkcard").prepend(
