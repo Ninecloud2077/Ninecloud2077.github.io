@@ -17,8 +17,7 @@ nav#browser {margin-bottom: 0;}
 .right {
     font-size: 23px;
 }
-.left img {
-    max-width: inherit;
-    max-height: inherit;
-    min-height: inherit;
+.left img{
+    width: 100%;
+    height: 100%;
 }
