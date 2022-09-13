@@ -41,7 +41,8 @@ function SetClasses(){
     $("a.nav-link i.fa").addClass("fa-fw");
     $(".left").addClass("col-6 col-sm-4");
     $(".left img").addClass("img-fluid");
-    $(".right").addClass("col text-info");
+    $(".right").addClass("col");
+    $("h2,h3").addClass("text-info");
 };
 
 function SetLink(){
