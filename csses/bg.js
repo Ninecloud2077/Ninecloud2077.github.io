@@ -39,53 +39,14 @@ function SetClasses(){
     $("#body").addClass("container");
     $("#links").addClass("container-fluid");
     $("a.nav-link i.fa").addClass("fa-fw");
-    $(".left").addClass("col-6 col-sm-4 img-fluid");
+    $(".left").addClass("col-6 col-sm-4");
+    $(".left img").addClass("img-fluid");
     $(".right").addClass("col text-info");
-
-    /*
-    $(".linkcard").prepend(
-        $("<h4>").text($(this).attr("title"))
-        );
-    $(".linkcard").css(
-        "background-image",
-        "url(\"".concat($(this).attr("img"),"\")")
-        );
-    */
 };
 
 function SetLink(){
     $("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
 }
-
-/*
-function SetCard(){
-    $("div.linkcard").load("scripts/LinkCard.html");
-    $("div.linkcard").addClass("card img-fluid");
-
-    $("div.linkcard").text(function(i,o){
-        $(this).find(".card-img-top").attr("src",carddiv.attr("img"));
-        $(this).find(".card-title").text(carddiv.attr("cardtitle"));
-        $(this).find(".card-text").text(carddiv.text());
-        $(this).find(".btn").attr("href",carddiv.attr("hrefpath"));
-        $(this).text("");
-
-        return "";
-    });
-
-    for(var i=0;i<$("div.linkcard").length;i++){
-        var carddiv=$("div.linkcard").eq(i);
-
-        $(this).find(".card-img-top").attr("src",carddiv.attr("img"));
-        $(this).find(".card-title").text(carddiv.attr("cardtitle"));
-        $(this).find(".card-text").text(carddiv.text());
-        $(this).find(".btn").attr("href",carddiv.attr("hrefpath"));
-        $(this).text("");
-
-        $(this).append($("div.linkcard").eq(i));
-    }      
-}
-*/  
-
 
 $(document).ajaxStop(function(){
     PutTemps();
