@@ -8,9 +8,9 @@ div#head {
     border-radius: 0;
 }
 nav#browser {margin-bottom: 0;}
-.left {
-    width: 40%;
-    height: 40%;
+.left img {
+    width: 100%;
+    margin: auto;
 }
 .right {
     font-size: 23px;
