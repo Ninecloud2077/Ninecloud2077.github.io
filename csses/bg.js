@@ -57,3 +57,7 @@ $(document).ajaxStop(function(){
         SetLink();
     }
 });
+
+$(document).ready(function(){
+    $(document).foundation();
+});
