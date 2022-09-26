@@ -26,7 +26,7 @@ function DoAjax(){
 DoAjax();
 
 function PutTemps(){
-    $("#body").before(nav);
+    $("#head").before(nav);
     $("#body").after(end);
     webtitle=webtitle.concat(" | NC_Const");
     $("head").append([head,$("<title></title>").text(webtitle)]);
@@ -37,6 +37,12 @@ function SetClasses(){
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
+    $("#links").addClass("container-fluid");
+    $("a.nav-link i.fa").addClass("fa-fw");
+    $(".left").addClass("col-6 col-sm-4");
+    $(".left img").addClass("img-fluid");
+    $(".right").addClass("col");
+    $("h2,h3").addClass("text-info");
 };
 
 function SetLink(){

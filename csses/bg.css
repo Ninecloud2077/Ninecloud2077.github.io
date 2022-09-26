@@ -1,6 +1,17 @@
 body {background-color:#FAFAFA;}
-a.nav-link,div#body p {font-size: 22.5px;}
-div#head p {font-size: 31.5px;}
+a.nav-link,div#body p {font-size: 22px;}
+div#head p {font-size: 30px;}
 div#body {margin-top: 1.25%;}
-div#head {margin-top: 0;margin-bottom: 0;border-radius: 0;}
+div#head {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+}
 nav#browser {margin-bottom: 0;}
+.left img {
+    width: 100%;
+    margin: auto;
+}
+.right {
+    font-size: 23px;
+}

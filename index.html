@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+      //-----------------
+      var beforehref="#"; //返回上一级时返回的网页
+      var rootpath="."; //根目录的相对路径
+      var debug=false; //是否使用本地css
+      var webtitle="Index"; //网页标题
+      //-----------------
+    </script>
+
+    <script src="https://ninecloud2077.github.io/csses/bg.js"></script>
+  </head>
+
+  <body>
+    <div id="head">
+      <h1>Ninecloud_Const的GitHub Pages页面</h1>
+      <p>通过链接和注意事项来了解更多！</p>
+    </div>
+
+    <div id="links">
+
+      <div class="row">
+        <a class="left" href="code/index.html">
+          <img src="code/hw.png" alt="Code页面链接" /></a>
+        <div class="right">
+          <h3>Codes</h3>
+          介绍部分编程语言。目的只是让人有基础。
+
+        </div>
+      </div>
+
+      <div class="row">
+        <a class="left" href="code/index.html">
+          <img src="" alt="页面链接" /></a>
+        <div class="right">
+          <h3>Games</h3>
+          两个项目：
+          <ul>
+            <li>小游戏</li>
+            <li>部分游戏的介绍，包括但不限于音游、教程较少的游戏</li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="body">
+      <h2>注意事项</h2>
+      <h2>php测试</h2>
+      <?php
+        echo $_GET["t"];
+    </div>
+
+  </body>
+</html>
