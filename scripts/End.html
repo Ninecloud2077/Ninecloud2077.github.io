@@ -4,7 +4,14 @@
 </div>
 
 <script>
+  function TryRunFound(){
+    try{
+      $(document).foundation();
+    } catch {
+      setTimeout(TryRunFound,0)
+    }
+  }
   $(document).ready(function(){
-    $(document).foundation();
+    setTimeout(TryRunFound,0)
   });
 </script>
