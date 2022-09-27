@@ -26,23 +26,25 @@ function DoAjax(){
 DoAjax();
 
 function PutTemps(){
-    $("#head").before(nav);
+    $("#head").after(nav);
     $("#body").after(end);
     webtitle=webtitle.concat(" | NC_Const");
     $("head").append([head,$("<title></title>").text(webtitle)]);
 }
 
 function SetClasses(){
-    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark fixed-top");
+    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark sticky");
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
-    $("#links").addClass("container-fluid");
+    $("#links").addClass("container small-block-grid-2 medium-block-grid-2 large-block-grid-4");
+    //$("#links a").addClass("panel text-center");
     $("a.nav-link i.fa").addClass("fa-fw");
-    $(".left").addClass("col-6 col-sm-4");
-    $(".left img").addClass("img-fluid");
-    $(".right").addClass("col");
+    //$(".left").addClass("col-6 col-sm-4");
+    //$(".left img").addClass("img-fluid");
+    //$(".right").addClass("col");
     $("h2,h3").addClass("text-info");
+    $("a").addClass("text-secondary");
 };
 
 function SetLink(){
@@ -52,6 +54,7 @@ function SetLink(){
 $(document).ajaxStop(function(){
     PutTemps();
     SetClasses();
+    //$(document).foundation();
     if(debug)
     {
         SetLink();

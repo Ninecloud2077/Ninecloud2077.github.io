@@ -1,17 +1,19 @@
 body {background-color:#FAFAFA;}
-a.nav-link,div#body p {font-size: 22px;}
-div#head p {font-size: 30px;}
+a.nav-link,div#body,div#head p,ul#links {font-size: 25px;}
+h2,h3,ul#links li h3 {font-size: 35px;}
 div#body {margin-top: 1.25%;}
+div#body ul,div#body li {font-size: inherit;}
 div#head {
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 0;
 }
-nav#browser {margin-bottom: 0;}
-.left img {
-    width: 100%;
-    margin: auto;
+nav#browser {margin-bottom: 10px;}
+div#end {
+    margin-top: 75px;
 }
-.right {
-    font-size: 23px;
+img.navbar-brand {max-width: 100px;max-height: 100px;}
+ul#links li a img {
+    width: 272px;
+    height: 153px;
 }
