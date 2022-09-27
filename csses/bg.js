@@ -52,7 +52,7 @@ function SetLink(){
 $(document).ajaxStop(function(){
     PutTemps();
     SetClasses();
-    //$(document).foundation();
+    $(document).foundation();
     if(debug)
     {
         SetLink();
