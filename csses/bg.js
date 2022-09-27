@@ -44,6 +44,7 @@ function SetClasses(){
     //$(".left img").addClass("img-fluid");
     //$(".right").addClass("col");
     $("h2,h3").addClass("text-info");
+    $("a").addClass("text-secondary");
 };
 
 function SetLink(){
