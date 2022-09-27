@@ -37,12 +37,12 @@ function SetClasses(){
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
-    $("#links").addClass("container-fluid");
-    $("#links a").addClass("panel text-center");
+    $("#links").addClass("container small-block-grid-2 medium-block-grid-3 large-block-grid-4");
+    //$("#links a").addClass("panel text-center");
     $("a.nav-link i.fa").addClass("fa-fw");
-    $(".left").addClass("col-6 col-sm-4");
-    $(".left img").addClass("img-fluid");
-    $(".right").addClass("col");
+    //$(".left").addClass("col-6 col-sm-4");
+    //$(".left img").addClass("img-fluid");
+    //$(".right").addClass("col");
     $("h2,h3").addClass("text-info");
 };
 
