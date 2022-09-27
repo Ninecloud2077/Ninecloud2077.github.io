@@ -26,14 +26,14 @@ function DoAjax(){
 DoAjax();
 
 function PutTemps(){
-    $("#head").before(nav);
+    $("#head").after(nav);
     $("#body").after(end);
     webtitle=webtitle.concat(" | NC_Const");
     $("head").append([head,$("<title></title>").text(webtitle)]);
 }
 
 function SetClasses(){
-    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark fixed-top");
+    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark sticky");
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
