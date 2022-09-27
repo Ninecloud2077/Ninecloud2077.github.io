@@ -3,12 +3,12 @@
   Powered by Bootstrap4&jQuery
 </div>
 
-<!--
 <script>
   function TryRunFound(){
     try{
       $(document).foundation();
     } catch {
+      console.log("Retrying")
       setTimeout(TryRunFound,0)
     }
   }
@@ -16,4 +16,3 @@
     setTimeout(TryRunFound,0)
   });
 </script>
--->
