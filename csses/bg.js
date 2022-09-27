@@ -37,7 +37,7 @@ function SetClasses(){
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
-    $("#links").addClass("container small-block-grid-2 medium-block-grid-3 large-block-grid-4");
+    $("#links").addClass("container small-block-grid-2 medium-block-grid-2 large-block-grid-4");
     //$("#links a").addClass("panel text-center");
     $("a.nav-link i.fa").addClass("fa-fw");
     //$(".left").addClass("col-6 col-sm-4");
