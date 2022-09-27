@@ -9,7 +9,7 @@ div#head {
 }
 nav#browser {margin-bottom: 10px;}
 img.navbar-brand {max-width: 100px;max-height: 100px;}
-a.panel img {
-    width: 15%;
-    height: 15%;
+ul#links li a img {
+    width: 240px;
+    height: 135px;
 }
