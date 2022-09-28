@@ -15,3 +15,7 @@ ul#links li a img {
     width: 272px;
     height: 153px;
 }
+ul#links li a img.square {
+    width: 180px;
+    height: 180px;
+}
