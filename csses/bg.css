@@ -10,7 +10,10 @@ div#head {
 }
 nav#browser {margin-bottom: 10px;}
 div#end {margin-top: 75px;}
-img.navbar-brand {max-width: 100px;max-height: 100px;}
+img.navbar-brand {
+    width: 85px;
+    height: 85px;
+}
 ul#links li a img {
     width: 272px;
     height: 153px;

@@ -38,13 +38,11 @@ function SetClasses(){
     $("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
     $("#links").addClass("container small-block-grid-2 medium-block-grid-2 large-block-grid-4");
-    //$("#links a").addClass("panel text-center");
     $("a.nav-link i.fa").addClass("fa-fw");
-    //$(".left").addClass("col-6 col-sm-4");
-    //$(".left img").addClass("img-fluid");
-    //$(".right").addClass("col");
     $("h2,h3").addClass("text-info");
     $("a").addClass("text-secondary");
+
+    $("img").attr("alt","这是一张图片，它可能没有成功加载");
 };
 
 function SetLink(){
