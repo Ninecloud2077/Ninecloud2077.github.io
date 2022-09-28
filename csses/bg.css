@@ -9,9 +9,7 @@ div#head {
     border-radius: 0;
 }
 nav#browser {margin-bottom: 10px;}
-div#end {
-    margin-top: 75px;
-}
+div#end {margin-top: 75px;}
 img.navbar-brand {max-width: 100px;max-height: 100px;}
 ul#links li a img {
     width: 272px;
