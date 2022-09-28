@@ -39,6 +39,7 @@ function SetClasses(){
     $("#body").addClass("container");
     $("#links").addClass("container small-block-grid-2 medium-block-grid-2 large-block-grid-4");
     $("a.nav-link i.fa").addClass("fa-fw");
+    $("h1").addClass("text-white");
     $("h2,h3").addClass("text-info");
     $("a").addClass("text-secondary");
 
