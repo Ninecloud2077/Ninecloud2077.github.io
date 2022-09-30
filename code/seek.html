@@ -28,14 +28,37 @@
       <h2>判断营销号的用具</h2>
       营销号常使用几种简单的语言来达到目的：
       <ul>
-        <li>Python</li>
-        <li>Windows命令行</li>
-        <li>HTML</li>
+        <li><b>Python：</b>简单易上手，第三方库功能强大，在少儿编程等各种领域都极受欢迎。</li>
+        <li><b>Windows命令行：</b>Windows系统基本都支持，无需进行编译、安装依赖等复杂操作，双击即可运行。<small>（注：下文有时将其简称为Cmd）</small></li>
+        <li><b>HTML：</b>有浏览器（即使是IE）即可运行。难度相对较高，同时代码量看起来也比较多。</li>
       </ul>
-      
+      如何判断营销号使用哪种语言？
+      <ul>
+        <li><b>看后缀名：</b>Python文件的后缀是<code>.py</code>，Windows Cmd是<code>.bat</code>，HTML是<code>.html</code>或<code>.htm</code>。</li>
+      </ul>
 
-      <h2>为何“一行代码做出xxx”一定是作假？</h2>
+      <h2>为何“x行代码做出xxx”多数是作假？</h2>
+      拿上面的几种语言，尝试完成3D效果的话：
+      <ul>
+        <li>Python很难完成3D效果，多是2D几何绘图（Turtle）。</li>
+        <li>Cmd基本不可能独立完成图形化。大多数Cmd实现3D效果依附于HTML。</li>
+        <li>一些视频中用Cmd中的start命令运行网上的HTML代码。HTML就是网页，营销号使用start命令实际上就类似于用浏览器打开网站。</li>
+        <li>HTML只是一个载体，想要表现特效、动画还需要CSS、Javascript。只有HTML的代码不可能达到效果。</li>
+      </ul>
+      总而言之，绝大多数语言是可以实现效果的，但需要的代码量远不止营销号所展现的。
       
+      <h2>题外话：用多种语言相互串通实现目的</h2>
+      <ul>
+        <li>在Python中如果出现<code>os.system</code>，代表用Python执行了Cmd命令。</li>
+        <li>上文所提到的，在Cmd中使用start命令就类似于多语言联系。start命令会打开一个网页，利用网页呈现效果。</li>
+        <li>奇思妙想出一种三语言串通方法：<small>（注：使用Python运行Cmd的start命令，以打开HTML网页）</small><br />
+          <pre>
+            import os
+            os.system("start https://www.baidu.com")
+          </pre>
+        </li>
+      </ul>
+
     </div>
 
   </body>
