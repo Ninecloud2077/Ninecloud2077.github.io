@@ -1,4 +1,5 @@
 var nav,end,head;
+var TempDid=false;
 function DoAjax(){
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Navbar.html",
     success:function(result){
@@ -51,10 +52,12 @@ function SetLink(){
 }
 
 $(document).ajaxStop(function(){
+    if (TempDid){return;}
     PutTemps();
     SetClasses();
     if(debug)
     {
         SetLink();
     }
+    TempDid=true;
 });
