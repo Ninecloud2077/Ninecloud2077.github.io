@@ -12,7 +12,12 @@
       //-----------------
     </script>
 
+    <style>
+      img#image {width: 100%;height: 100%;}
+    </style>
+
     <script src="https://ninecloud2077.github.io/csses/bg.js"></script>
+    <script src="search.js"></script>
   </head>
 
   <body>
@@ -21,15 +26,24 @@
       <p>框架网页</p>
     </div>
 
-    <ul id="links">
-      <li><h3>Codes - 编程</h3>
-        介绍部分编程语言，主要让没有接触编程的人认识其奥秘。</li>
-      <li><a href=""><img src="" /></a></li>
-    </ul>
+    <ul id="links"></ul>
 
     <div id="body">
-      <h2>大标题</h2>
-      正文
+      <div class="row">
+        <img id="image" class="col-6 col-sm-4" src="" />
+        <ul class="col">
+          <iframe id="iframe" frameborder="no" border="0" marginwidth="0" marginheight="0" width=470 height=86 src=""></iframe>
+          <li id="name">歌曲名：</li>
+          <li id="others">歌曲别称：</li>
+          <li id="author">曲师：</li>
+        </ul>  
+      </div>
+
+      <h2>曲目信息</h2>
+      <div id="songabout"></div>
+
+      <h2>音游侧信息</h2>
+      <div id="gameabout"></div>
     </div>
 
   </body>
