@@ -3,6 +3,10 @@ a.nav-link,div#body,div#head p,ul#links {font-size: 25px;}
 h2,h3,ul#links li h3 {font-size: 35px;}
 div#body {margin-top: 1.25%;}
 div#body ul,div#body li {font-size: inherit;}
+div#body ul {
+    margin-top: 15px;
+    margin-right: 15px;
+}
 div#head {
     margin-top: 0;
     margin-bottom: 0;
