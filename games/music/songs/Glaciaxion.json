@@ -1,5 +1,10 @@
 {
-    "name":"Glaciaxion",
-    "others":"骷髅头",
-    "author":"SunsetRay"
+    "info":{
+        "name":"Glaciaxion",
+        "others":"骷髅头",
+        "author":"SunsetRay"
+    },
+    
+    "iframe":"",
+    "image":""
 }
