@@ -11,28 +11,44 @@ function SearchSplit(Locate){
 
 $(document).ready(function(){
     var Song=SearchSplit(location.search).s;
-    if (!Song)
-    {
-        $("#body").text("查询出现错误！")
+    if(!Song){
+        $("#body").text("Not Found!");
+        return;
     }else{
-        var url="https://ninecloud2077.github.io/games/music/songs/"+Song+".json";
-        var infos=["name","others","author"];
-        var passages=["songabout","gameabout"];
-        $.ajax({url:url,
-        success:function(result){
-            for(var i=0;i<infos.length;i++){
-                $("#"+infos[i]).text(function(n,o){
-                    return o+result["info"][infos[i]];
-                })
-            };
-            for(var i=0;i<passages.length;i++){
-                $("#"+passages[i]).load(result.passages,"#"+passages[i]+"-temp")
-            };
-            $("#iframe").attr("src",result.iframe);
-            $("#image").attr("src","songs/"+result.image);
-
-        }
-        });
+        Song=Song.toLowerCase();
     }
 
+    var url="https://ninecloud2077.github.io/games/music/songs/songinfo.json";
+    var infos=["name","others","author"];
+    var passages=["songabout","gameabout"];
+    $.ajax({url:url,
+    success:function(result){
+        var found=false;
+        for(var i=0;i<result.length;i++){
+            var obj=result[i];
+            if(obj.url==Song){
+                result=obj;
+                found=true;
+                console.log(result);
+            }
+        }
+
+        if(!found){
+            $("#body").text("Not Found!");
+            return;
+        }
+
+        for(var i=0;i<infos.length;i++){
+            $("#"+infos[i]).text(function(n,o){
+                return o+result.info[infos[i]];
+            })
+        };
+        for(var i=0;i<passages.length;i++){
+            $("#"+passages[i]).load(result.passages,"#"+passages[i]+"-temp")
+        };
+
+        $("#iframe").attr("src",result.iframe);
+        $("#image").attr("src","songs/"+result.image);
+    }
+    });
 });

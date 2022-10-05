@@ -5,14 +5,15 @@
     
     <script>
       //-----------------
-      var beforehref="index.html"; //返回上一级时返回的网页
-      var rootpath="."; //根目录的相对路径
+      var beforehref="../index.html"; //返回上一级时返回的网页
+      var rootpath="../.."; //根目录的相对路径
       var debug=false; //是否使用本地css
-      var webtitle="Frame"; //网页标题
+      var webtitle="Songs"; //网页标题
       //-----------------
     </script>
 
     <script src="https://ninecloud2077.github.io/csses/bg.js"></script>
+    <script src="reveal.js"></script>
   </head>
 
   <body>
@@ -24,18 +25,21 @@
     <ul id="links">
       <li><h3>音游歌曲查阅</h3>
         尽可能地收录歌曲</li>
-      <li><a href="songshow.html"><img src="" /></a></li>
+      <li><button type="button" style="width: 100%;height: 100%;" class="btn btn-primary" data-reveal-id="searcher">开始搜索</button></li>
     </ul>
 
-    <div id="body">
-      <small>下方输入搜索的歌曲：</small>
-        <form action="songshow.html" method="get" class="row">
-          <input name="s" class="col-8" style="margin-bottom: 0;height: 50px;" />
-          <div class="col-1"></div>
-          <input type="submit" value="submit" class="btn btn-primary col" />
-        </form>
+    <div id="searcher" class="reveal-modal container" data-reveal>
+      <h3 class="text-center">歌曲搜索框</h3><br />
+      <div class="row">
+        <i class="fa fa-search fa-2x text-center col"></i>
+        <div class="col-11"><input id="search" placeholder="输入歌曲名称..." /></div>
+      </div>
 
+      <ul id="results"></ul>
+      <a class="close-reveal-modal">&times;</a>
     </div>
+
+    <div id="body"></div>
 
   </body>
 </html>
