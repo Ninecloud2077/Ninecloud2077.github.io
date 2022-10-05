@@ -29,7 +29,6 @@ $(document).ready(function(){
             if(obj.url==Song){
                 result=obj;
                 found=true;
-                console.log(result);
             }
         }
 
@@ -44,7 +43,7 @@ $(document).ready(function(){
             })
         };
         for(var i=0;i<passages.length;i++){
-            $("#"+passages[i]).load(result.passages,"#"+passages[i]+"-temp")
+            $("#"+passages[i]).load("songs/"+result.passages,"#"+passages[i]+"-temp")
         };
 
         $("#iframe").attr("src",result.iframe);
