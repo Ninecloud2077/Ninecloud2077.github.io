@@ -5,13 +5,15 @@ function DoAjax(){
     success:function(result){
         nav=$(result);
         nav.find("#before").attr("href",beforehref);
-    }
+    },
+    async:false
     });
 
     $.ajax({url:"https://ninecloud2077.github.io/scripts/End.html",
     success:function(result){
         end=$(result);
-    }
+    },
+    async:false
     });
 
     $.ajax({url:"https://ninecloud2077.github.io/scripts/Head.html",
@@ -21,25 +23,26 @@ function DoAjax(){
         {
             head.find("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
         }
-    }
+    },
+    async:false
     });
 };
-DoAjax();
+//DoAjax();
 
 function PutTemps(){
     $("#head").after(nav);
     $("#body").after(end);
-    webtitle=webtitle.concat(" | NC_Const");
+    webtitle+=" | NC_Const";
     $("head").append([head,$("<title></title>").text(webtitle)]);
 }
 
 function SetClasses(){
-    $("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark sticky");
+    //$("#browser").addClass("navbar navbar-expand-md navbar-dark bg-dark sticky");
     $("#head").addClass("jumbotron bg-secondary text-center text-white");
-    $("#end").addClass("jumbotron text-center text-secondary");
+    //$("#end").addClass("jumbotron text-center text-secondary");
     $("#body").addClass("container");
     $("#links").addClass("container small-block-grid-2 medium-block-grid-2 large-block-grid-4");
-    $("a.nav-link i.fa").addClass("fa-fw");
+    //$("a.nav-link i.fa").addClass("fa-fw");
     $("h1").addClass("text-white");
     $("h2,h3").addClass("text-info");
     $("a").addClass("text-secondary");
@@ -51,6 +54,17 @@ function SetLink(){
     $("#selfcss").attr("href",rootpath.concat("/csses/bg.css"));
 }
 
+$(document).ready(function(){
+    DoAjax();
+    PutTemps();
+    SetClasses();
+    if(debug)
+    {
+        SetLink();
+    }
+});
+
+/*
 $(document).ajaxStop(function(){
     if (TempDid){return;}
     PutTemps();
@@ -61,3 +75,4 @@ $(document).ajaxStop(function(){
     }
     TempDid=true;
 });
+*/

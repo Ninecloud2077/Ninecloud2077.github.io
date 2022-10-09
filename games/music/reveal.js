@@ -8,10 +8,9 @@ success:function(result){
 $(document).ready(function(){
     $("#search").change(function(){
         var value=$("#search").val();
-        if(!value){
-            $("#results").empty();
-            return;
-        }
+        $("#results").empty();
+
+        if(!value){return;}
     
         for(var i=0;i<infos.length;i++){
             var songobj=infos[i];
