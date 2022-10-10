@@ -9,6 +9,8 @@ function SearchSplit(Locate){
     return LocaObj;
 }
 
+var abouts;
+
 $(document).ready(function(){
     var Song=SearchSplit(location.search).s;
     if(!Song){
@@ -29,6 +31,7 @@ $(document).ready(function(){
             if(obj.url==Song){
                 result=obj;
                 found=true;
+                break;
             }
         }
 
@@ -42,8 +45,14 @@ $(document).ready(function(){
                 return o+result.info[infos[i]];
             })
         };
+        $.ajax({url:"https://ninecloud2077.github.io/games/music/songs/"+result.passages,
+            success:function(about){
+                abouts=$(about);
+            },
+            async:false
+        });
         for(var i=0;i<passages.length;i++){
-            $("#"+passages[i]).load("songs/"+result.passages,"#"+passages[i]+"-temp")
+            $("#"+passages[i]).append(abouts.find("#"+passages[i]+"-temp"));
         };
 
         $("#iframe").attr("src",result.iframe);
