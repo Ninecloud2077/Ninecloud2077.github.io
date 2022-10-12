@@ -52,7 +52,7 @@ $(document).ready(function(){
             async:false
         });
         for(var i=0;i<passages.length;i++){
-            $("#"+passages[i]).append(abouts.find("#"+passages[i]+"-temp"));
+            $("#"+passages[i]).after(abouts.find("#"+passages[i]+"-temp"));
         };
 
         $("#iframe").attr("src",result.iframe);
