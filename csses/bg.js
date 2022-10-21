@@ -26,6 +26,8 @@ function DoAjax(){
     },
     async:false
     });
+
+    PutTemps();
 };
 //DoAjax();
 
@@ -48,14 +50,7 @@ function SetClasses(){
     $("a.linktext").text(function(i){
         return $("a.linktext").eq(i).attr("href");
     });
-    $("a.titletext").text(function(i){
-        $.ajax({url:$("a.titletext").eq(i).attr("href"),
-        success:function(result){
-            title=result.find("title").text();
-        },
-        async:false
-        })
-    });
+    $("#body h2,#body h3").before("<hr />");
 };
 
 function SetLink(){
@@ -63,8 +58,7 @@ function SetLink(){
 }
 
 $(document).ready(function(){
-    DoAjax();
-    PutTemps();
+    setTimeout(DoAjax,0);
     SetClasses();
     if(debug)
     {
