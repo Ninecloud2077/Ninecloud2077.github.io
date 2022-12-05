@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <script>
+      //-----------------
+      var beforehref="../index.html"; //返回上一级时返回的网页
+      var rootpath=".."; //根目录的相对路径
+      var debug=false; //是否使用本地css
+      var webtitle="Colors"; //网页标题
+      //-----------------
+    </script>
+
+    <script src="https://ninecloud2077.github.io/csses/bg.js"></script>
+  </head>
+
+  <body>
+    <div id="head">
+      <h1>颜色表</h1>
+      <p>来自：<a class="linktext text-light" href="https://www.bilibili.com/video/BV1Dd4y117s5/"></a></p>
+    </div>
+
+    <ul id="links"></ul>
+
+    <div id="body">
+      <h2>颜色列表</h2>
+			<hr />
+      <ul class="container small-block-grid-2 medium-block-grid-2 large-block-grid-4">
+        <li style='background-color:#fff799;'>黄白游:#fff799</li>
+        <li style='background-color:#ffee6f;'>松花:#ffee6f</li>
+        <li style='background-color:#ecd452;'>缃叶:#ecd452</li>
+        <li style='background-color:#b6a014;'>苍黄:#b6a014</li>
+        <li style='background-color:#f9d3e3;'>盈盈:#f9d3e3</li>
+        <li style='background-color:#ffee6f;'>水红:#ffee6f</li>
+        <li style='background-color:#9e2a22;'>苏梅:#9e2a22</li>
+        <li style='background-color:#a76283;'>紫茎屏风:#a76283</li>
+        <li style='background-color:#ba5b49;'>赤缇:#ba5b49</li>
+        <li style='background-color:#ffee6f;'>朱草:#ffee6f</li>
+        <li style='background-color:#c7c6b6;'>顺圣:#c7c6b6</li>
+        <li style='background-color:#ebeee8;'>皦玉:#ebeee8</li>
+        <li style='background-color:#ebeddf;'>吉量:#ebeddf</li>
+        <li style='background-color:#9e2a22;'>韶粉:#9e2a22</li>
+        <li style='background-color:#a6559d;'>紫蒲:#a6559d</li>
+        <li style='background-color:#8a1874;'>赪紫:#8a1874</li>
+        <li style='background-color:#6c216d;'>齐紫:#6c216d</li>
+        <li style='background-color:#422256;'>凝夜紫:#422256</li>
+        <li style='background-color:#dcc7e1;'>昌容:#dcc7e1</li>
+        <li style='background-color:#bba1cb;'>紫薄汗:#bba1cb</li>
+        <li style='background-color:#a67eb7;'>茈藐:#a67eb7</li>
+        <li style='background-color:#7d5284;'>紫紶:#7d5284</li>
+        <li style='background-color:#c3d94e;'>青粲:#c3d94e</li>
+        <li style='background-color:#b7d332;'>翠缥:#b7d332</li>
+        <li style='background-color:#9ebc19;'>人籁:#9ebc19</li>
+        <li style='background-color:#84a729;'>水龙吟:#84a729</li>
+        <li style='background-color:#e2a2ac;'>彤管:#e2a2ac</li>
+        <li style='background-color:#dd6b7b;'>渥赭:#dd6b7b</li>
+        <li style='background-color:#c25160;'>唇脂:#c25160</li>
+        <li style='background-color:#b81a35;'>朱孔阳:#b81a35</li>
+        <li style='background-color:#d5d1ae;'>筠雾:#d5d1ae</li>
+        <li style='background-color:#bfc096;'>瓷秘:#bfc096</li>
+        <li style='background-color:#a9a886;'>琬琰:#a9a886</li>
+        <li style='background-color:#92905d;'>青圭:#92905d</li>
+        <li style='background-color:#cb523e;'>赩炽:#cb523e</li>
+        <li style='background-color:#b13b2e;'>石榴裙:#b13b2e</li>
+        <li style='background-color:#95302e;'>朱湛:#95302e</li>
+        <li style='background-color:#822327;'>大繎:#822327</li>
+        <li style='background-color:#f5b087;'>骍刚:#f5b087</li>
+        <li style='background-color:#f18f60;'>赪霞:#f18f60</li>
+        <li style='background-color:#ef845d;'>赪尾:#ef845d</li>
+        <li style='background-color:#ed6d46;'>朱柿:#ed6d46</li>
+        <li style='background-color:#e3adb9;'>夕岚:#e3adb9</li>
+        <li style='background-color:#cf929e;'>雌霓:#cf929e</li>
+        <li style='background-color:#b27777;'>绛纱:#b27777</li>
+        <li style='background-color:#a35f65;'>茹藘:#a35f65</li>
+        <li style='background-color:#88abda;'>窃蓝:#88abda</li>
+        <li style='background-color:#6f94cd;'>监德:#6f94cd</li>
+        <li style='background-color:#5976ba;'>苍苍:#5976ba</li>
+        <li style='background-color:#2e59a7;'>群青:#2e59a7</li>
+        <li style='background-color:#f0cfe3;'>退红:#f0cfe3</li>
+        <li style='background-color:#e4b8d5;'>樱花:#e4b8d5</li>
+        <li style='background-color:#ce93bf;'>丁香:#ce93bf</li>
+        <li style='background-color:#ba79b1;'>木槿:#ba79b1</li>
+        <li style='background-color:#f5fe29;'>凝脂:#f5fe29</li>
+        <li style='background-color:#eae4d1;'>玉色:#eae4d1</li>
+        <li style='background-color:#dfd6d8;'>黄润:#dfd6d8</li>
+        <li style='background-color:#d5c8a0;'>缣缃:#d5c8a0</li>
+        <li style='background-color:#d5e3d4;'>卵色:#d5e3d4</li>
+        <li style='background-color:#cad7c5;'>葭菼:#cad7c5</li>
+        <li style='background-color:#becab7;'>冰台:#becab7</li>
+        <li style='background-color:#b3bda9;'>青古:#b3bda9</li>
+        <li style='background-color:#a6bab1;'>醽醁:#a6bab1</li>
+        <li style='background-color:#819d8e;'>翠涛:#819d8e</li>
+        <li style='background-color:#778a77;'>青梅:#778a77</li>
+        <li style='background-color:#5f766a;'>翕赩:#5f766a</li>
+        <li style='background-color:#d12920;'>银朱:#d12920</li>
+        <li style='background-color:#ab1d22;'>胭脂虫:#ab1d22</li>
+        <li style='background-color:#8f1d22;'>朱樱:#8f1d22</li>
+        <li style='background-color:#631216;'>爵头:#631216</li>
+        <li style='background-color:#fffbc7;'>半见:#fffbc7</li>
+        <li style='background-color:#f7eead;'>女贞黄:#f7eead</li>
+        <li style='background-color:#ece093;'>绢纨:#ece093</li>
+        <li style='background-color:#d6c560;'>姜黄:#d6c560</li>
+        <li style='background-color:#d4e5ef;'>月白:#d4e5ef</li>
+        <li style='background-color:#bcd4e7;'>星郎:#bcd4e7</li>
+        <li style='background-color:#a3bbdb;'>晴山:#a3bbdb</li>
+        <li style='background-color:#8aabcc;'>品月:#8aabcc</li>
+        <li style='background-color:#788a6f;'>雀梅:#788a6f</li>
+        <li style='background-color:#5d7259;'>油绿:#5d7259</li>
+        <li style='background-color:#4e6548;'>莓莓:#4e6548</li>
+        <li style='background-color:#3f503b;'>螺青:#3f503b</li>
+        <li style='background-color:#796860;'>濯绛:#796860</li>
+        <li style='background-color:#585248;'>墨黪:#585248</li>
+        <li style='background-color:#46433b;'>驖骊:#46433b</li>
+        <li style='background-color:#31322c;'>京元:#31322c</li>
+        <li style='background-color:#a4c9cc;'>并天:#a4c9cc</li>
+        <li style='background-color:#6ca8af;'>正青:#6ca8af</li>
+        <li style='background-color:#509296;'>扁青:#509296</li>
+        <li style='background-color:#2e59a7;'>䌦色:#2e59a7</li>
+        <li style='background-color:#c8b6bb;'>石英:#c8b6bb</li>
+        <li style='background-color:#9c8d9b;'>银褐:#9c8d9b</li>
+        <li style='background-color:#9d858f;'>烟红:#9d858f</li>
+        <li style='background-color:#76555d;'>紫诰:#76555d</li>
+    	</ul>
+    </div>
+
+  </body>
+</html>
