@@ -203,8 +203,10 @@
                             a = parseInt(e.text().substr(0));
                         }
                         var v = c.children(".score-per").text();
-                        var r = (c.children("input").val() + a) * parseInt(v.substring(1, v.length - 1)) / 100;
-                        c.children(".score-calc").text(r);
+                        //console.log(parseInt(v.substring(1, v.length - 1)));
+                        var r = (parseInt(c.children("input").val()) + a) * parseInt(v.substring(1, v.length - 1)) / 100;
+                        c.children(".score-calc").text(isNaN(r) ? 0 : r);
+                        console.log("---");
                     }
 
                     var result = 0;
