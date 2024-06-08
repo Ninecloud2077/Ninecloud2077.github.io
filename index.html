@@ -17,6 +17,76 @@
         <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
         <script src="https://cdn.staticfile.net/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+        <script>
+            var grade = {
+                "云师大附中": 684,
+                "昆一中": 680,
+                "昆三中": 676,
+                "昆八中": 676,
+                "昆十中白塔校区": 662,
+                "昆十中求实校区": 671,
+                "云大附中星耀学校": 677,
+                "昆十四中": 663,
+                "昆一中西山学校": 674,
+                "官一中": 659,
+                "昆十二中环城南路校区": 648,
+                "昆十二中环湖校区": 654,
+                "云南民族中学": 644,
+                "实验中学": 635,
+                "实验中学（特色）": 579,
+                "官二中": 654,
+                "官五中": 635,
+                "官六中": 635,
+                "昆明市外国语学校": 643,
+                "昆二十四中": 639,
+                "云师大附中西山学校（西一中）": 649,
+                "云师大附属世纪金源学校": 642,
+                "昆三中经开学校": 665,
+                "昆三中呈贡学校": 635,
+                "昆三中西山学校": 656,
+                "云师大实验中学盘龙校区": 665,
+                "云师大实验中学盘龙校区（特色）": 624,
+                "云大附中呈贡校区": 670,
+                "云师大附中呈贡校区": 669,
+                "昆明西南联大研究院附属学校": 663,
+                "昆明西南联大研究院附属学校（特色）": 576,
+                "昆一中晋宁学校": 635,
+                "昆一中经开校区": 641,
+                "昆一中经开校区（特色）": 555,
+                "昆一中空港学校": 635,
+                "昆明市盘龙区财大附中": 635,
+                "官渡区北清实验学校": 667,
+                "西南大学官渡实验学校": 655,
+                "五华区昆一中学贯中学": 671,
+                "昆明金岸中学": 635,
+                "官渡区上师大实验附中": 635,
+                "官渡区云师大实验附中": 653,
+                "昆五中": 618,
+                "昆九中": 625,
+                "明德民族中学": 600,
+                "昆十六中": 614,
+                "昆十七中": 616,
+                "昆三十中": 612,
+                "昆三十一中": 606,
+                "中央民附五华实验中学": 620,
+                "新迎中学": 630,
+                "经开一中": 627,
+                "西山实验中学": 620,
+                "粤秀中学": 607,
+                "云光中学": 591,
+                "高新三中": 610,
+                "晋宁二中": 599,
+                "呈贡七甸学校": 629,
+                "昆五中（特色）": 560,
+                "昆九中（特色）": 592,
+                "明德民族中学（特色）": 555,
+                "昆十七中（特色）": 581,
+                "昆三十中（特色）": 555,
+                "中央民附五华实验中学（特色）": 582,
+                "昆明艺术学校（特色）": 555
+            }
+        </script>
+
         <style>
             #subj-exam{
                 display: grid;
@@ -54,6 +124,9 @@
                 color: orangered;
                 font-size: xx-large;
                 margin: 5px;
+            }
+            .score-sub{
+                font-size: larger;
             }
 
             #score-result{
@@ -190,11 +263,20 @@
                 <span id="calc-result"></span>
                 <small>（声明：仅供参考）</small>
             </div>
+
+            <div id="school-list" class="text-center">
+                <h4>分差20分之内学校（参考2023年）：</h4>
+                <div id="school-result"></div>
+            </div>
+
+            </div>
         </div>
 
         <script>
             $(document).ready(function(){
                 $("#calc-start").click(function(){
+                    $("#school-result").empty();
+
                     for(i of $(".subject")){
                         var c = $(i).children(".score-flex");
                         var e = c.children(".score-extra");
@@ -212,6 +294,33 @@
                         result += parseFloat($(i).text());
                     }
                     $("#calc-result").text(result);
+
+                    for(i in grade){
+                        var s = result - grade[i];
+
+                        if(-20 <= s && s <= 20){
+                            $("#school-result").append(
+                                $("<div></div>")
+                                .append([
+                                    $("<span></span>").text(`${i} （${grade[i]}）`),
+                                    $("<span></span>").text(s > 0 ? "+" + Math.floor(s) : Math.floor(s))
+                                        .addClass("score-sub m-2 " + (s > 0 ? "text-success" : "text-danger"))
+                                ])
+                                .addClass("school-item")
+                            );
+                        }
+                    }
+
+                    if(!$("#school-result").children().length){
+                        $("#school-result").append(
+                            $("<div></div>")
+                            .append(
+                                $("<span></span>")
+                                .text("好像...没有？")
+                                .addClass("school-item")
+                            )
+                        );
+                    }
                 });
             });
         </script>
